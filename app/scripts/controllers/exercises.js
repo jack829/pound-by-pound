@@ -1,11 +1,15 @@
 'use strict';
 
-app.controller('ExerciseCtrl', function($scope) {
-  $scope.exercises = [];
-  $scope.exercise = {title: '', weight: ''};
+app.controller('ExerciseCtrl', function($scope, Post) {
+  $scope.exercises = Post.all;
+  $scope.exercise = {title: ''};
 
   $scope.addEx = function(){
-    $scope.posts.push($scope.post);
-    $scope.posts = {title: '', weight: ''};
+    Post.create($scope.exercise).then(function() {
+      $scope.exercise = {title: ''};
+    });
+  };
+  $scope.deleteEx = function(exercise) {
+    Post.delete(exercise);
   };
 });

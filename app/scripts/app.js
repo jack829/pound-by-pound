@@ -16,13 +16,19 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ])
+    'ngTouch',
+    'firebase'
+  ]);
+app.constant('poundbypound', 'https://poundbypound.firebaseio.com/')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/exercises.html',
         controller: 'ExerciseCtrl'
+      })
+      .when('/exercises/:exerciseName', {
+        templateUrl: 'views/showexercise.html',
+        controller: 'ExerciseViewCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -1,0 +1,35 @@
+<div>
+  <h2>{{ exercise.$id }}</h2>
+</div> <br/>
+
+<h4>Add Workout</h4>
+
+<form ng-sumbit='addInstance();'>
+  <input type='text' ng-model='instanceDate' placeholder='mm/dd/year'/><br/>
+  <input type='text' ng-model='instanceWeight' placeholder='Weight'/><br/>
+  <input type='text' ng-model='instanceReps' placeholder='Reps'/>
+  <input type='submit' value='New Set'/>
+</form><br/>
+
+
+
+<table border="1">
+  <th>
+    <td>  Date  </td>
+    <td>  Weight  </td>
+    <td>  Reps  </td>
+  </th>
+  <tr ng-repeat="instance in instances">
+    <td>{{instance.date}}</td>
+    <td>{{instance.weight}}</td>
+    <td>{{instance.reps}}</td>
+  </tr>
+</table><br/>
+
+<a ng-href='#/exercises'>Back to All</a>
+<br/>
+
+<pre>
+Exercise: {{exercise}}
+Instances: {{instances}}
+</pre>

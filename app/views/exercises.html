@@ -1,8 +1,17 @@
-<form ng-submit="addEx()">
-  <input type="text" ng-model="exercise.title"/>
-  <input type="text" ng-model="exercise.weight"/>
-  <input type="submit" value="Add Exercise" />
-</form>
+<div>
+  <h2>Exercises</h2>
+</div><br/>
 
+<div ng-repeat="exercise in exercises">
+  <a ng-href="#/exercises/{{exercise.title}}">{{exercise.title}}</a>
+  <a ng-click="deleteEx(exercise)">Remove</a>
+</div><br/>
+
+<form ng-submit="addEx()">
+  <input type="text" ng-model="exercise.title" placeholder="Add new Exercise"/> <br/>
+  <input type="submit" value="Add Exercise" />
+</form><br/>
+<pre>
 Exercises: {{exercises}} <br/>
 Exercise: {{exercise}}
+</pre>
