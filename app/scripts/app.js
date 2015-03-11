@@ -1,3 +1,4 @@
+
 'use strict';
 /*global app: true
 exported app */
@@ -34,3 +35,4 @@ app.constant('poundbypound', 'https://poundbypound.firebaseio.com/')
         redirectTo: '/'
       });
   });
+

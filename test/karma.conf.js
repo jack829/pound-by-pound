@@ -1,3 +1,4 @@
+
 // Karma configuration
 // http://karma-runner.github.io/0.12/config/configuration-file.html
 // Generated on 2015-03-11 using
@@ -28,8 +29,6 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
-      'bower_components/firebase/firebase.js',
-      'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
@@ -80,3 +79,4 @@ module.exports = function(config) {
     // urlRoot: '_karma_'
   });
 };
+>>>>>>> Initiate directory with yeomen angular

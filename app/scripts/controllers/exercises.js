@@ -1,3 +1,4 @@
+
 'use strict';
 
 app.controller('ExerciseCtrl', function($scope, Post) {
@@ -13,3 +14,4 @@ app.controller('ExerciseCtrl', function($scope, Post) {
     Post.delete(exercise);
   };
 });
+
