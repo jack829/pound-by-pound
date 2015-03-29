@@ -1,7 +1,7 @@
 
 'use strict';
-/*global app: true
-exported app */
+/*global app: true */
+/* exported app */
 /**
  * @ngdoc overview
  * @name 201502SoloApp

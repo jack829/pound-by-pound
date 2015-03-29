@@ -5,7 +5,7 @@ app.controller('ExerciseViewCtrl', function($scope, $routeParams, Post) {
   $scope.instances = Post.instances($routeParams.exerciseName);
   
   $scope.addInstance = function() {
-    console.log("in addInstance")
+    console.log('in addInstance');
     if(!$scope.instanceWeight || $scope.instanceWeight === ''){
       return;
     }
@@ -14,7 +14,7 @@ app.controller('ExerciseViewCtrl', function($scope, $routeParams, Post) {
       weight: $scope.instanceWeight,
       reps: $scope.instanceReps
     };
-    console.log("Instance", instance)
+    console.log('Instance', instance);
     $scope.instances.$add(instance);
     $scope.instance = {date:'', weight:''};
   };
