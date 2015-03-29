@@ -1,4 +1,3 @@
-
 'use strict';
 /*global app: true */
 /* exported app */

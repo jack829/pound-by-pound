@@ -13,17 +13,19 @@
 
 
 
-<table border="1">
+<table border=""  class="table">
   <th>
-    <td>  Date  </td>
+      Date  
     <td>  Weight  </td>
     <td>  Reps  </td>
+    <td></td>
   </th>
   <tr ng-repeat="instance in instances">
-    <td></td>
+    
     <td>{{instance.date}}</td>
     <td>{{instance.weight}}</td>
     <td>{{instance.reps}}</td>
+    <td ng-click="removeInstance(instance)">remove</td>
   </tr>
 </table><br/>
 
