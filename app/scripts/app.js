@@ -30,6 +30,15 @@ app.constant('poundbypound', 'https://poundbypound.firebaseio.com/')
         templateUrl: 'views/showexercise.html',
         controller: 'ExerciseViewCtrl'
       })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'AuthCtrl',
+        resolve: {
+          user: function(Auth) {
+            return Auth.resolveUser();
+          }
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });
