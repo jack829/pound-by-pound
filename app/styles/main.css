@@ -81,3 +81,21 @@ body {
     border-bottom: 0;
   }
 }
+
+/* exercise form styling */
+
+input {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+table {
+  margin-top: 20px;
+}
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
