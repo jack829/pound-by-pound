@@ -3,16 +3,14 @@
   <h2>Exercises</h2>
 </div><br/>
 
-<table>
-  <th>
-    <td><h2>Exercises: </h2></td>
-  </th>
+<table class="table">
   <tr ng-repeat="exercise in exercises">
-    <td><a ng-href="#/exercises/{{exercise.title}}">{{exercise.title}} </a></td>
-    <td> Last Weight: </td>
+    <td> <a class="exList" ng-href="#/exercises/{{exercise.title}}">{{exercise.title}} </a></td>
+    <!-- <td> Last Weight: {{instances[0].weight}}</td> -->
+    <td class="exList"><a ng-click="deleteEx(exercise)">Remove</a></td>
   </tr>
- <!--  <a ng-click="deleteEx(exercise)">Remove</a> -->
 </table><br/>
+
 
 <form ng-submit="addEx()">
   <input type="text" ng-model="exercise.title" placeholder="Add new Exercise"/> <br/>
@@ -21,6 +19,6 @@
 
 <pre>
 Exercises: {{exercises}} <br/>
-Exercise: {{exercise}}
+Exercise: {{exercise}} <br/>
+Instances: {{instances.bench}}
 </pre>
-

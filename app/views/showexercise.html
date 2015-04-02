@@ -16,7 +16,7 @@
 
 <table border=""  class="table">
   <th>
-      Date  
+          Date  
     <td>  Weight  </td>
     <td>  Reps  </td>
     <td></td>
@@ -26,9 +26,11 @@
     <td>{{instance.date}}</td>
     <td>{{instance.weight}}</td>
     <td>{{instance.reps}}</td>
-    <td ng-click="removeInstance(instance)">remove</td>
+    <td ng-click="removeInstance($index)">remove</td>
   </tr>
 </table><br/>
+
+
 
 <a ng-href='#/exercises'>Back to All</a>
 <br/>

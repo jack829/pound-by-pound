@@ -4,6 +4,8 @@
 app.controller('ExerciseCtrl', function($scope, Post) {
   $scope.exercises = Post.all;
   $scope.exercise = {title: ''};
+  $scope.instances = Post.getInstances();
+  
 
   $scope.addEx = function(){
     Post.create($scope.exercise).then(function() {

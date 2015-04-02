@@ -1,12 +1,14 @@
 'use strict';
 
-app.controller('ExerciseViewCtrl', function($scope, $routeParams, Post) {
+app.controller('ExerciseViewCtrl', function($scope, $routeParams, $location, Post) {
   $scope.exercise = Post.get($routeParams.exerciseName);
   $scope.instances = Post.instances($routeParams.exerciseName);
+  $scope.allInstances = Post.getInstances();
 
   
   $scope.addInstance = function() {
-    console.log("routeParams ", $scope.instances[2]);
+    console.log("instances ", $scope.instances);
+    console.log("all Instances ", $scope.allInstances);
 
     var instance = {
       date: $scope.instanceDate,
@@ -23,4 +25,11 @@ app.controller('ExerciseViewCtrl', function($scope, $routeParams, Post) {
   $scope.removeInstance = function(instance) {
     $scope.instances.$remove(instance);
   };
+
+  // $scope.deleteExercise = function(exercise) {
+  //   console.log("exercise ", exercise);
+  //   Post.delete(exercise).then(function() {
+  //     $location.path('/');
+  //   });
+  // };
 });
