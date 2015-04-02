@@ -82,4 +82,4 @@ module.exports = function(config) {
     // urlRoot: '_karma_'
   });
 };
->>>>>>> Initiate directory with yeomen angular
+
